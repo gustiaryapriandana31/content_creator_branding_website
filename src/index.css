@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+img.cc-image {
+    filter: drop-shadow(2px 2px 2px white);
+}
