@@ -1,24 +1,53 @@
 import FormContact from '../layouts/FormContact';
-import CC from "../../assets/shandy-luo-frame.png";
-import { BiMessageRoundedDetail } from "react-icons/bi";
-import { FaEnvelope } from "react-icons/fa";
+import CC from "../../assets/cc-shandy-luo2.png";
+import { TiBusinessCard } from "react-icons/ti";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineAttachEmail } from "react-icons/md";
+import { MdLocationPin } from "react-icons/md";
 
 const Contact = () => {
     return (
       <main className="bg-gray-900 min-h-screen p-10">
-        <h2 className="my-5 md:mb-6 mb-3 text-center md:text-5xl text-3xl font-bold text-green-600 font-audiowide">
+        <h2 className="my-3 md:mb-10 text-center md:text-5xl text-3xl font-bold text-green-600 font-audiowide">
           Let's Connect with me
         </h2>
-        <div className="flex flex-row gap-5 items-center ">
-          <div className="basis-1/2 shadow-md rounded-lg">
-            <img src={CC} alt="Shandy Luo Image" className='mx-auto w-3/4 h-1/2 rounded-full border border-green-500 p-2'/>
+        <section className="relative flex flex-row gap-8 items-center">
+          <img src={CC} alt="Shandy Luo Image" className='absolute top-3 left-56 w-36 h-36 rounded-full shadow-md shadow-slate-50'/>
+          <div className="basis-2/5 pt-20">
+            <div className='float-right pt-16 p-5 w-3/4 shadow-md shadow-gray-800 rounded-lg grid grid-cols-2 md:grid-cols-1 gap-5 text-white font-poppins'>
+              <aside className='flex flex-col md:flex-row'>
+                <TiBusinessCard className="text-2xl mr-5 mt-2 text-green-500" />
+                <div className='text-sm'>
+                  <p>Business Inquire</p>
+                  <p>Instagram @busynesshandy</p>
+                </div>
+              </aside>
+              <aside className='flex flex-col md:flex-row'>
+                <FaPhoneAlt className="text-2xl mr-5 mt-2 text-green-500" />
+                <div className='text-sm'>
+                  <p>Our Management</p>
+                  <p>(+62)890 8715 6771</p>
+                </div>
+              </aside>
+              <aside className='flex flex-col md:flex-row'>
+                <MdOutlineAttachEmail className="text-2xl mr-5 mt-2 text-green-500" />
+                <div className='text-sm'>
+                  <p>Email</p>
+                  <p>managementshandy@gmail.com</p>
+                </div>
+              </aside>
+              <aside className='flex flex-col md:flex-row'>
+                <MdLocationPin className="text-3xl mr-5 mt-2 text-green-500" />
+                <div className='text-sm'>
+                  <p>Address</p>
+                  <p>Digital Creator Corner, CC Team 23778, Jakarta</p>
+                </div>
+              </aside>
+            </div>
           </div>
-          <div>
-            <BiMessageRoundedDetail className="text-6xl text-green-500" />
-            <FaEnvelope className="text-6xl text-green-500" />
-          </div>
+          
           <FormContact />
-        </div>
+        </section>
       </main>
     );
 }

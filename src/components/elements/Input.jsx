@@ -4,7 +4,7 @@ const Input = ({ type, name, placeholder, onChange }) => {
       type={type}
       name={name}
       placeholder={placeholder}
-      className="appearance-none text-white bg-gray-900 text-sm w-full py-3 px-3 placeholder:opacity-80 outline-none focus:border-b-2 focus:border-green-500"
+      className="appearance-none text-white bg-gray-900 text-sm w-full py-3 px-3 placeholder:opacity-80 outline-none focus:border-b-2 focus:border-green-500 shadow-sm shadow-gray-700 rounded-lg"
       onChange={onChange}
     />
   );
