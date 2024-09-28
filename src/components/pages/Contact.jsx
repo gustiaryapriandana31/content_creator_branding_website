@@ -12,7 +12,7 @@ const Contact = () => {
           Let's Connect with me
         </h2>
         <section className="relative flex flex-row gap-8 items-center">
-          <img src={CC} alt="Shandy Luo Image" className='absolute top-3 left-56 w-36 h-36 rounded-full shadow-md shadow-slate-50'/>
+          <img src={CC} alt="Shandy Luo Image" className='absolute top-3 left-56 w-36 h-36 rounded-full shadow-md shadow-green-200'/>
           <div className="basis-2/5 pt-20">
             <div className='float-right pt-16 p-5 w-3/4 shadow-md shadow-gray-800 rounded-lg grid grid-cols-2 md:grid-cols-1 gap-5 text-white font-poppins'>
               <aside className='flex flex-col md:flex-row'>

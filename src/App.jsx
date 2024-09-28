@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <ContentCreatorTravels />
       <Contact/>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
