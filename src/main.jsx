@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import NotFoundPage from "./components/layouts/NotFoundPage.jsx";
 import AllTravels from "./components/pages/AllTravels.jsx";
+import AyoMain from './components/pages/AyoMain.jsx';
 
 const Router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const Router = createBrowserRouter([
   {
     path: "/travels",
     element: <AllTravels />,
+  },
+  {
+    path: "/games",
+    element: <AyoMain />,
   }
 ]);
 

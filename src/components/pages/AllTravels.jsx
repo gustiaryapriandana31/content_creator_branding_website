@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "../fragments/Card";
 import Button from "../elements/Button";
-import { FaLocationArrow } from "react-icons/fa";
-import PopUpDetailTravel from "../layouts/PopUpDetailTravel";
+import PopUpDetailTravel from "../fragments/PopUpDetailTravel";
 
 const ContentCreatorDatas = [
   {
@@ -83,7 +82,6 @@ const ContentCreatorTravels = () => {
 
        if (TravelDetailDataRef) {
          setTravelDetail(TravelDetailDataRef);
-         console.log(TravelDetail);
        } else {
          console.log("No detail travel data found", TravelId);
        }
@@ -92,7 +90,7 @@ const ContentCreatorTravels = () => {
      }
    };
   return (
-    <section className="md:pt-5 p-4 bg-gray-950">
+    <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
       <div className="md:p-12 p-3">
         <h2 className="my-5 md:mb-6 mb-3 text-center md:text-6xl text-3xl font-bold text-green-600">
           Shandy's Travels

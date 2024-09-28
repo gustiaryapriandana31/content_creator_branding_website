@@ -38,7 +38,7 @@ const ContentCreatorDatas = [
 
 const ContentCreatorTravels = () => {
   return (
-    <section className="md:pt-5 p-4 bg-gray-950">
+    <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
       <div className="md:p-12 p-3">
         <h2 className="my-5 md:mb-6 mb-3 text-center md:text-5xl text-3xl font-audiowide font-bold text-green-600">
           Shandy's Travels
