@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Card from "../fragments/Card";
 import Button from "../elements/Button";
 import PopUpDetailTravel from "../fragments/PopUpDetailTravel";
+import Header from "../layouts/Header";
+import PageTransition from "./PageTransition";
+import StairTransition from "./StairTransition";
 
 const ContentCreatorDatas = [
   {
@@ -68,7 +70,6 @@ const ContentCreatorDatas = [
   },
 ];
 
-
 const ContentCreatorTravels = () => {
    const [TravelDetail, setTravelDetail] = useState([]);
    const [popUpDetailTravel, setPopUpDetailTravel] = useState(false);
@@ -90,35 +91,42 @@ const ContentCreatorTravels = () => {
      }
    };
   return (
-    <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
-      <div className="md:p-12 p-3">
-        <h2 className="my-5 md:mb-6 mb-3 text-center md:text-6xl text-3xl font-bold text-green-600">
-          Shandy's Travels
-        </h2>
-        <div className="md:p-3 md:mb-0 mb-7 grid grid-cols-2 md:grid-cols-4 md:gap-7">
-          {ContentCreatorDatas.map((data) => (
-            <Card key={data.TravelId}>
-              <Card.CardHeader
-                TravelImg={data.TravelImg}
-                TravelName={data.TravelName}
-              />
-              <Card.CardBody
-                TravelName={data.TravelName}
-                TravelDesc={data.TravelDesc}
-              />
-              <Card.CardFooter
-                TravelId={data.TravelId}
-                handleShowDetailTravel={handleShowDetailTravel}
-              />
-            </Card>
-          ))}
-        </div>
-      </div>
+    <>
+    
+      <Header/>
+      <StairTransition/>
+      <PageTransition>
+        <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
+          <div className="md:p-12 p-3">
+            <h2 className="my-5 md:mb-6 mb-3 text-center md:text-6xl text-3xl font-bold text-green-600">
+              Shandy's Travels
+            </h2>
+            <div className={`${popUpDetailTravel ? "opacity-20" : "opacity-100"} transition-all duration-100 md:p-3 md:mb-0 mb-7 grid grid-cols-2 md:grid-cols-4 md:gap-7`}>
+              {ContentCreatorDatas.map((data) => (
+                <Card key={data.TravelId}>
+                  <Card.CardHeader
+                    TravelImg={data.TravelImg}
+                    TravelName={data.TravelName}
+                  />
+                  <Card.CardBody
+                    TravelName={data.TravelName}
+                    TravelDesc={data.TravelDesc}
+                  />
+                  <Card.CardFooterAllTravels
+                    TravelId={data.TravelId}
+                    handleShowDetailTravel={handleShowDetailTravel}
+                  />
+                </Card>
+              ))}
+            </div>
+          </div>
 
-      {popUpDetailTravel && 
-        <PopUpDetailTravel popUpDetailTravel={popUpDetailTravel} setPopUpDetailTravel={setPopUpDetailTravel} TravelDetail={TravelDetail} setTravelDetail={setTravelDetail}/>
-      }
-    </section>
+          {popUpDetailTravel && 
+            <PopUpDetailTravel popUpDetailTravel={popUpDetailTravel} setPopUpDetailTravel={setPopUpDetailTravel} TravelDetail={TravelDetail} setTravelDetail={setTravelDetail}/>
+          }
+        </section>
+      </PageTransition>
+    </>
   );
 };
 

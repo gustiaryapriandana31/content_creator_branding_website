@@ -13,13 +13,13 @@ const FormContact = () => {
         <motion.form
           initial={{ opacity: 1 }}
           style={{
-            transform: isInView ? "translateX(20px)" : "translateX(200px)",
+            transform: isInView ? "translateX(10px)" : "translateX(200px)",
             opacity: isInView ? 1 : 0,
             transition: "transform 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
-          className="p-10 bg-gray-800 w-[85%] mx-auto rounded-2xl shadow-sm group-hover:shadow-green-500"
+          className="p-10 bg-gray-800 md:w-[85%] mx-auto rounded-lg shadow-sm group-hover:shadow-green-500"
         >
-          <h1 className="text-center font-bold text-3xl text-gray-600 group-hover:text-green-500 mb-3">
+          <h1 className="text-center font-bold md:text-3xl text-2xl text-gray-600 group-hover:text-green-500 mb-3">
             Let's influence together
           </h1>
           <p className="text-sm font-roboto mb-6 text-center group-hover:animate-pulse">

@@ -14,7 +14,7 @@ const PopUpDetailTravel = ({
   return (
     <div>
       {TravelDetail && (
-        <div className="md:w-1/2 md:p-8 p-5 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full right-0 bg-white/90 shadow-lg rounded-xl">
+        <div className="md:w-1/2 md:p-8 p-5 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-[90%] right-0 bg-white/90 shadow-lg rounded-xl">
           <img
             src={TravelDetail.TravelImg}
             alt={TravelDetail.TravelName}

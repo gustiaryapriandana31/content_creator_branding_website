@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 
 const Card = ({ children, TravelRotate }) => {
@@ -33,7 +34,15 @@ const CardBody = ({ TravelName, TravelDesc }) => {
   );
 };
 
-const CardFooter = ({ TravelId, handleShowDetailTravel }) => {
+const CardFooterCCTravels = () => {
+  return (
+    <Link to="/travels" className="w-full `px-6 py-2 hover:font-semibold text-white outline-none focus:outline-none focus:outline-green-400 text-center mt-4 bg-green-600 rounded-xl">
+      See
+    </Link>
+  );
+};
+
+const CardFooterAllTravels = ({ TravelId, handleShowDetailTravel }) => {
   return (
     <Button
       addedClassname="mt-4 bg-green-600 rounded-xl"
@@ -46,6 +55,7 @@ const CardFooter = ({ TravelId, handleShowDetailTravel }) => {
 
 Card.CardHeader = CardHeader;
 Card.CardBody = CardBody;
-Card.CardFooter = CardFooter;
+Card.CardFooterCCTravels = CardFooterCCTravels;
+Card.CardFooterAllTravels = CardFooterAllTravels;
 
 export default Card;
