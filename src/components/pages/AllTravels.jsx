@@ -5,6 +5,7 @@ import PopUpDetailTravel from "../fragments/PopUpDetailTravel";
 import Header from "../layouts/Header";
 import PageTransition from "./PageTransition";
 import StairTransition from "./StairTransition";
+import Footer from "../layouts/Footer";
 
 const ContentCreatorDatas = [
   {
@@ -125,6 +126,7 @@ const ContentCreatorTravels = () => {
           }
         </section>
       </PageTransition>
+      <Footer/>
     </>
   );
 };
