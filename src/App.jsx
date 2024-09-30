@@ -5,6 +5,7 @@ import Contact from "./components/pages/Contact";
 import Header from "./components/layouts/Header";
 import PageTransition from "./components/pages/PageTransition";
 import StairTransition from "./components/pages/StairTransition";
+import Info from "./components/layouts/Info";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <HeroSection />
         <ContentCreatorTravels />
         <Contact/>
+        <Info />
         <Footer />
       </PageTransition>
     </>

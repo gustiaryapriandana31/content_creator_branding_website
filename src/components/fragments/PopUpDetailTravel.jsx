@@ -25,7 +25,7 @@ const PopUpDetailTravel = ({
           </h1>
           <h1>{TravelDetail.TravelDesc}</h1>
           <Button
-            addedClassname="mt-4 bg-green-600 rounded-xl"
+            addedClassname="mt-4 px-4 py-2 bg-green-600 rounded-xl"
             onClick={handleCloseDetailTravel}
           >
             Close

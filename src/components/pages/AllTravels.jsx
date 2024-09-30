@@ -92,13 +92,12 @@ const ContentCreatorTravels = () => {
    };
   return (
     <>
-    
       <Header/>
       <StairTransition/>
       <PageTransition>
         <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
           <div className="md:p-12 p-3">
-            <h2 className="my-5 md:mb-6 mb-3 text-center md:text-6xl text-3xl font-bold text-green-600">
+            <h2 className="mt-7 md:mb-6 mb-3 text-center md:text-6xl text-3xl font-bold text-green-600">
               Shandy's Travels
             </h2>
             <div className={`${popUpDetailTravel ? "opacity-20" : "opacity-100"} transition-all duration-100 md:p-3 md:mb-0 mb-7 grid grid-cols-2 md:grid-cols-4 md:gap-7`}>

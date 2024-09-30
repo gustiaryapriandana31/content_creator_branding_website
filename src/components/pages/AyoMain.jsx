@@ -138,7 +138,7 @@ const AyoMain = () => {
       <StairTransition />
       <PageTransition>
         <section className="md:pt-5 p-4 bg-gray-950 min-h-screen">
-          <h2 className="my-5 md:mb-6 mb-3 text-center md:text-5xl text-3xl font-audiowide font-bold text-green-600">
+          <h2 className="mt-20 md:mb-6 mb-3 text-center md:text-5xl text-3xl font-audiowide font-bold text-green-600">
             Ayo Main!!!
           </h2>
           <motion.main
@@ -230,12 +230,12 @@ const AyoMain = () => {
           {/* Action Button Below Quiz's Card */}
           <div className="flex flex-row justify-center font-poppins">
             <Link to="/" className="inline-block">
-              <Button addedClassname="mx-3 mt-4 bg-blue-600 rounded-xl">
+              <Button addedClassname="mx-3 mt-4 px-4 py-2 bg-blue-600 rounded-xl">
                 Back to Home
               </Button>
             </Link>
             <Button
-              addedClassname="mt-4 bg-green-600 rounded-xl"
+              addedClassname="mt-4 px-4 py-2 bg-green-600 rounded-xl"
               onClick={() => nextQuestion()}
             >
               Next
